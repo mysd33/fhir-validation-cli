@@ -356,8 +356,9 @@ message = None of the provided codes [urn:oid:1.2.392.100495.20.3.22#1] are in t
 ```
 
 ## 実行例2
-* コマンドの実行例2（-tx オプション未指定） 
-
+* コマンドの実行例2（-tx オプション未指定）     
+    * -txオプション未指定だとすぐに終わりました。
+    * でも、どちらにせよ、結局、正しいサンプルデータのはずなのに、エラーも出てうまくいかず。。。    
 ```sh
 java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01.json -display-issues-are-warnings -ig jp-ereferral#0.9.7.tgz -tx n/a
 ```
