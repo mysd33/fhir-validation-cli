@@ -47,8 +47,6 @@ java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01
         * 2回目以降は、キャッシュされて、その分は早くなりました。
         * キャッシュは、「%userprofile%\.fhir\package」フォルダに保存される
     * 正しいサンプルデータのはずなのに、エラーも出てうまくいかず。。。
-    * -txオプションありだと、なぜか、バリデーションの処理にとてつもなく時間がかかりました。（数分とか数十分ではなく、1時間近いレベル）なので、使い物にならないかも。。
-    * 一方、[後述の実行例2](#実行例2)では、「-tx n/a」で実施するとすぐに処理が終了しました。
 
 ```sh
 >java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01.json -display-issues-are-warnings -ig jp-ereferral#0.9.7.tgz -tx https://tx.jpfhir.jp:8081
