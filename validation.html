@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Validation Results</title>
+  <link href="http://hl7.org/fhir/fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results</h1>
+ <p>24 errors, 5 warnings, 9 hints. Generated 2023/06/13 9:11:53 by Validator Version 6.0.15 (Git# cc14a4142f40). Built 2023-06-08T21:23:55.484Z (4 days old) (12544ms)</p>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#;1"><b>Bundle-BundleReferralExample01.json</b></a></td><td><b>24</b></td><td><b>5</b></td><td><b>9</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="l1"> </a>
+<h2><a href="file:Bundle-BundleReferralExample01.json">Bundle-BundleReferralExample01.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.type (l39/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.encounter (l64/c10)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sm2" class="flip" onclick="flip('m2')">Show Reasoning</span><div id="m2" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.section[2].section[4].entry[0] (l297/c20)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile urn:uuid:711b07ae-d20b-40b0-9aa9-c7f1981409e6 among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.section[2].section[4].entry[0] (l297/c20)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:711b07ae-d20b-40b0-9aa9-c7f1981409e6 matching against profile http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|1.1.1</b> <span id="sm4" class="flip" onclick="flip('m4')">Show Reasoning</span><div id="m4" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[15].resource/*AllergyIntolerance/alg1ReferralExample01Inline*/.encounter: Unable to find a match for profile urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter</li>, <li>Bundle.entry[15].resource/*AllergyIntolerance/alg1ReferralExample01Inline*/.encounter: <ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.section[2].section[4].entry[1] (l302/c20)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile urn:uuid:5a1aae74-f720-415a-ba15-a6c8b5d4c5a1 among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.section[2].section[4].entry[1] (l302/c20)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:5a1aae74-f720-415a-ba15-a6c8b5d4c5a1 matching against profile http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|1.1.1</b> <span id="sm6" class="flip" onclick="flip('m6')">Show Reasoning</span><div id="m6" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[16].resource/*AllergyIntolerance/alg1ReferralExample02Inline*/.encounter: Unable to find a match for profile urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter</li>, <li>Bundle.entry[16].resource/*AllergyIntolerance/alg1ReferralExample02Inline*/.encounter: <ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.class (l477/c10)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.classHistory[0].class (l484/c14)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/ (l460/c8)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[9].resource/*Encounter/purposeReferralExample01Inline*/.class (l809/c10)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[15].resource/*AllergyIntolerance/alg1ReferralExample01Inline*/.encounter (l1097/c10)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sm11" class="flip" onclick="flip('m11')">Show Reasoning</span><div id="m11" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[15].resource/*AllergyIntolerance/alg1ReferralExample01Inline*/.encounter (l1097/c10)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[15].resource/*AllergyIntolerance/alg1ReferralExample01Inline*/.encounter (l1097/c10)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e matching against profile http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|1.1.1</b> <span id="sm13" class="flip" onclick="flip('m13')">Show Reasoning</span><div id="m13" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[16].resource/*AllergyIntolerance/alg1ReferralExample02Inline*/.encounter (l1149/c10)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sm14" class="flip" onclick="flip('m14')">Show Reasoning</span><div id="m14" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[16].resource/*AllergyIntolerance/alg1ReferralExample02Inline*/.encounter (l1149/c10)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e among choices: http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[16].resource/*AllergyIntolerance/alg1ReferralExample02Inline*/.encounter (l1149/c10)</b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e matching against profile http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|1.1.1</b> <span id="sm16" class="flip" onclick="flip('m16')">Show Reasoning</span><div id="m16" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/: Encounter.reasonCode: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.5)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[17].resource/*Observation/psobsCommonExample01Inline*/.category[0] (l1183/c12)</b></td><td><b>warning</b></td><td title="Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')"><b>Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[0] (l17/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[1] (l392/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[2] (l458/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[3] (l496/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[4] (l540/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[5] (l584/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[6] (l651/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[7] (l718/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[8] (l754/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[9] (l790/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[10] (l821/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[11] (l866/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[12] (l911/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[13] (l960/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[14] (l1010/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[15] (l1060/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[16] (l1112/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[17] (l1164/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[18] (l1202/c6)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Bundle.entry:bundleData.resource in profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle (l1/c2)</b></td><td><b>information</b></td><td title="Validation_VAL_Profile_NoCheckMin"><b>Bundle.entry:composition: Found 0 matches, but unable to check minimum required (Bundle.entry) due to lack of slicing validation (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|1.1.5)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[17].resource.category[0] (l1183/c12)</b></td><td><b>warning</b></td><td title="Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')"><b>Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')</b></td>
+   </tr>
+</table>
