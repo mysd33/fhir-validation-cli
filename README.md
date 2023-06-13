@@ -36,15 +36,15 @@
             * 「-tx n/a」にすると未指定（Terminologyサーバなし）になる模様
             * 参考: [-txオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-TerminologyServer)
         * -display-issues-are-warningsのオプションは、Validator V6.06以降で追加で必要になったそうで、これがないと表示名が日本語となっているUS版コードシステムのcodeの使用時にエラー扱いとなるとのこと。
-          * 参考: [-display-issues-are-warningsオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Displaywarnings)
+            * 参考: [-display-issues-are-warningsオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Displaywarnings)
     * その他、使えそうなオプション
-      * [-output/-html-output/-output-styleオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-ManagingOutput)
-        * デフォルトでは、標準出力に単純なテキストで出力されるバリデーション結果の、出力先や出力形式を指定可能
-        * -html-outputオプションで出力すると、HTMLのレポートが結構見やすい
-      * [-levelオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Level)
-        * バリデーションのメッセージ出力する最低レベルを指定可能（hints, warnings, errors）
-      * [-txLogオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Logging)
-        * バリデータの問題でデバッグしたい場合に、validatorがTerminologyサーバへの用語をクエリ（terminology queries）したログが出力可能        
+        * [-output/-html-output/-output-styleオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-ManagingOutput)
+            * デフォルトでは、標準出力に単純なテキストで出力されるバリデーション結果の、出力先や出力形式を指定可能
+            * -html-outputオプションで出力すると、HTMLのレポートが結構見やすい
+        * [-levelオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Level)
+            * バリデーションのメッセージ出力する最低レベルを指定可能（hints, warnings, errors）
+        * [-txLogオプション](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator#UsingtheFHIRValidator-Logging)
+            * バリデータの問題でデバッグしたい場合に、validatorがTerminologyサーバへの用語をクエリ（terminology queries）したログが出力可能        
       
 
 ## 実行例1
@@ -59,12 +59,13 @@ java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01
 ```
 
 * [上記コマンド実行結果のHTML](validation.html)
+    * 上記をダウンロードする等してブラウザで見ると、以下のように、結構きれいに見えます。
 
+![HTMLのイメージ](validation_html.png)
 
 ## 実行例2
-* コマンドの実行例2（-tx オプション未指定）     
-    * -txオプション未指定だと、時間はかからず、すぐに処理が終了しました。
-    * でも、どちらにせよ、結局、正しいサンプルデータのはずなのに、エラーも出てうまくいかず。。。    
+* コマンドの実行例2（-tx オプション未指定）    
+    * こちらもほぼ同様のエラーで。。。    
 ```sh
 java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01.json -display-issues-are-warnings -ig jp-ereferral#0.9.7.tgz -tx n/a -html-output validation_no_tx.html
 ```
