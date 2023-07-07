@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Validation Results</title>
+  <link href="http://hl7.org/fhir/fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results</h1>
+ <p>0 errors, 5 warnings, 1 hint. Generated 2023/07/07 23:26:25 by Validator Version 6.0.15 (Git# cc14a4142f40). Built 2023-06-08T21:23:55.484Z (28 days old) (12977ms)</p>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#;1"><b>Bundle-BundleReferralExample01-fixed.json</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="l1"> </a>
+<h2><a href="file:Bundle-BundleReferralExample01-fixed.json">Bundle-BundleReferralExample01-fixed.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.type (l39/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.class (l477/c10)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.classHistory[0].class (l484/c14)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[9].resource/*Encounter/purposeReferralExample01Inline*/.class (l814/c10)</b></td><td><b>warning</b></td><td title="Terminology_PassThrough_TX_Message"><b>Wrong Display Name '外来' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB - should be one of 1 choices: 'ambulatory' (for the language(s) 'en') for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[17].resource/*Observation/psobsCommonExample01Inline*/.category[0] (l1188/c12)</b></td><td><b>warning</b></td><td title="Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')"><b>Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[17].resource.category[0] (l1188/c12)</b></td><td><b>warning</b></td><td title="Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')"><b>Wrong Display Name '身体検査・観察' for http://terminology.hl7.org/CodeSystem/observation-category#exam - should be one of 1 choices: 'Exam' (for the language(s) 'en')</b></td>
+   </tr>
+</table>

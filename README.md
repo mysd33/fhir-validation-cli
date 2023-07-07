@@ -63,11 +63,27 @@ java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01
 
 ![HTMLのイメージ](validation_html.png)
 
-## 実行例2
-* コマンドの実行例2（-tx オプション未指定）    
-    * こちらもほぼ同様のエラーで。。。    
+* エラー箇所を修正したサンプルデータおよび、修正したStructureDefinitionによる診療情報提供書のnpmパッケージを使用すると、バリデーションも正常終了します。
 ```sh
-java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01.json -display-issues-are-warnings -ig jp-ereferral#0.9.7.tgz -tx n/a -html-output validation_no_tx.html
+java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01-fixed.json -display-issues-are-warnings -ig jp-ereferral-0.9.7-snap-fixed.tgz -tx https://tx.jpfhir.jp:8081 -html-output validation_fixed_data.html -txLog txLog.txt
 ```
 
-* [上記コマンド実行結果のHTML](validation_no_tx.html)
+* [上記コマンド実行結果のHTML](validation_fixed_data.html)
+    * 上記をダウンロードする等してブラウザで見ると、以下のように、結構きれいに見えます。
+
+## 実行例2
+* コマンドの実行例2（-tx オプション未指定で、Terminologyサーバなしの場合）    
+
+~~* こちらもほぼ同様のエラーで。。。~~
+~~```sh~~
+~~java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01.json -display-issues-are-warnings -ig jp-ereferral#0.9.7.tgz -tx n/a -html-output validation_no_tx.html~~
+~~```~~
+
+~~* [上記コマンド実行結果のHTML](validation_no_tx.html)~~
+
+* エラー箇所を修正したサンプルデータおよび、修正したStructureDefinitionによる診療情報提供書のnpmパッケージを使用すると、バリデーションも正常終了します。
+```sh
+java -Dfile.encoding=UTF-8 -jar validator_cli.jar Bundle-BundleReferralExample01-fixed.json -display-issues-are-warnings -ig jp-ereferral-0.9.7-snap-fixed.tgz -ig jp-edissummary#0.9.7.tgz -ig jp-core.r4-1.1.1-rc.tgz -tx n/a -html-output validation_no_tx_fixed_data.html
+```
+
+* [上記コマンド実行結果のHTML](validation_no_tx_fixed_data.html)
